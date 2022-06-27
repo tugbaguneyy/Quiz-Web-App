@@ -25,7 +25,7 @@ class quizController extends Controller
      */
     public function create()
     {
-        return "create fonk";
+        return view('create');
     }
 
     /**
