@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 //use App\Http\Controllers\App;
-use App\Http\Controllers\Yonet;
+/*use App\Http\Controllers\Yonet;
 use App\Http\Controllers\Formslemleri;
 use App\Http\Controllers\VeritabaniIslemleri;
 use App\Http\Controllers\ModelISlemleri;
 use App\Http\Controllers\Iletisim;
-use App\Http\Controllers\ResimYukle;
+use App\Http\Controllers\ResimYukle;*/
+use App\Http\Controllers\quizController;
 
 Route::get('/', function () {return view('welcome');});
 
@@ -60,7 +61,9 @@ Route::middleware([
 });
 
 Route::group(['middleware'=>['auth','isAdmin'],'prefix'=>'admin'],function () {
-  Route::get('deneme',function(){
-      return "prefix testi";
-  });
+Route::resource('quizzes',quizController::class);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
