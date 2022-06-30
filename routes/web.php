@@ -9,6 +9,7 @@ use App\Http\Controllers\ModelISlemleri;
 use App\Http\Controllers\Iletisim;
 use App\Http\Controllers\ResimYukle;*/
 use App\Http\Controllers\quizController;
+use App\Http\Controllers\QuestionController;
 
 Route::get('/', function () {return view('welcome');});
 
@@ -62,7 +63,9 @@ Route::middleware([
 
 Route::group(['middleware'=>['auth','isAdmin'],'prefix'=>'admin'],function () {
 Route::get('quizzes/{id}',[quizcontroller::class,'destroy'])->whereNumber('id')->name('quizzes.destroy');
+Route::get('quiz/{quiz_id}/questions/{id}',[QuestionController::class,'destroy'])->whereNumber('id')->name('questions.destroy');
 Route::resource('quizzes',quizController::class);
+Route::resource('quiz/{quiz_id}/questions',QuestionController::class);
 });
 
 Auth::routes();
