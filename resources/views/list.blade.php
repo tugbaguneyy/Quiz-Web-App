@@ -25,19 +25,26 @@
     <td >
       @switch($quiz->status)
         @case('publish')
+        @if(!$quiz->finished_at)
+          <span style="color:green">Aktif</span>
+        @elseif( $quiz->finished_at>now())
          <span style="color:green">Aktif</span>
+       @else
+         <span style="color:brown">Son kullanım tarihi geçti.</span>
+      @endif
         @break
         @case('passive')
         <span style="color:red">Pasif</span>
         @break
         @case('draft')
          <span style="color:gray">Taslak</span>
-         @break
+        @break
 
        @endswitch
     </td>
     <td >{{$quiz->finished_at}}</td>
     <td>
+      <a href="{{route('quizzes.details',$quiz->id)}}" class="btn btn-sm btn-secondary">Bilgi</a>
       <a href='{{route('questions.index',$quiz->id)}}' class="btn btn-sm btn-warning">Soru+<i class="fa fa-questions"></i></a>
       <a href='{{route('quizzes.edit',$quiz->id)}}' class="btn btn-sm btn-primary">Düzenle<i class="fa fa-edit"></i></a>
       <a href='{{route('quizzes.destroy',$quiz->id)}}' class="btn btn-sm btn-danger">Sil<i class="fa fa-times"></i></a>

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\quizController;
+use App\Http\Controllers\quizcontroller;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\MainController;
 
@@ -17,8 +17,9 @@ Route::group(['middleware'=>'auth'],function(){
 
 Route::group(['middleware'=>['auth','isAdmin'],'prefix'=>'admin'],function () {
 Route::get('quizzes/{id}',[quizcontroller::class,'destroy'])->whereNumber('id')->name('quizzes.destroy');
+Route::get('quizzes/{id}/details',[quizcontroller::class,'show'])->whereNumber('id')->name('quizzes.details');
 Route::get('quiz/{quiz_id}/questions/{id}',[QuestionController::class,'destroy'])->whereNumber('id')->name('questions.destroy');
-Route::resource('quizzes',quizController::class);
+Route::resource('quizzes',quizController::class); //hatalı yazım
 Route::resource('quiz/{quiz_id}/questions',QuestionController::class);
 });
 
