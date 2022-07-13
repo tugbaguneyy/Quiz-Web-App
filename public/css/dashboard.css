@@ -1,0 +1,268 @@
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  /* rtl:raw:
+  right: 0;
+  */
+  bottom: 0;
+  /* rtl:remove */
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/*  */
+/* Dashboard CSS*/
+
+.soru{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  float: left;
+  margin: 10px;
+  padding: 25px;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px 5px rgb(184, 182, 182);
+  background-color:white;
+  border-radius: 5px solid black;
+  }
+  .soru-metni{
+   margin-left: 15px;
+   font-size: 18px;
+   font-weight: bolder;
+  }
+  .cevap{
+   margin-left: 15px;
+  }
+  .cevap label{
+   margin-left:10px;
+   font-size: 18px;
+  }
+  .cevap input{
+   width: 20px;
+   height: 20px;
+  }
+  .kutu{
+   background-color: aqua;
+   width: 26%;
+   height: 150px;
+   float: right;
+   margin-top: 10px;
+
+  }
+  .text{
+   text-align: center;
+  }
+  .s-tr{
+    text-align: center;
+}
+.s-tr td{
+    text-align: center;
+}
+.sonuc{
+  box-shadow: 3px 3px 3px 3px #6782bb;
+}
+.quiz{
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+    box-shadow: 5px 5px 5px 5px rgb(184, 182, 182);
+    padding: 20px;
+
+}
+.sol{
+    float: left;
+}
+.sag{
+    float:right;
+}
+.alt{
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+.gg-add{
+    float: left;
+    margin-right: 2px;
+    width: 5px;
+    height: 5px;
+}
+.qbtn-sari{
+    background-color: rgb(214, 156, 31);
+    border-color: rgb(214, 156, 31);
+    border-radius: 3px;
+    color: white;
+    height: 30px;
+    height: 30px;
+}
+.qbtn-mavi{
+    background-color: rgb(43, 31, 214);
+    border-color: rgb(43, 31, 214);
+    border-radius: 3px;
+    color: white;
+    height: 30px;
+    height: 30px;
+}
+.qbtn-kirmizi{
+    background-color: rgb(240, 15, 15);
+    border-color: rgb(240, 15, 15);
+    border-radius: 3px;
+    color:white;
+    height: 30px;
+    height: 30px;
+}
+.sag a{
+    padding: 8px;
+    background-color: rgb(43, 31, 214);
+    color:white;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.sag a:hover{
+    background-color: rgb(56, 46, 194);
+
+}
+.sol input{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    color: black;
+    
+}
+.selc{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color:black;
+}
+
+.footer{
+  background-color: #404244;
+  margin-top: 180px;
+  margin-bottom: -20px;
+  width: 100%;
+  height: 100%;
+}
+.footer p{
+  text-align: center;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.bilgi{
+  width: 200px;
+  height: 100px;
+  background-color: #00ffee;
+  color: black;
+  border-radius: 5%;
+  margin: 25px;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.bilgi h5{
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.bilgi h4{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.date{
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid;
+}
