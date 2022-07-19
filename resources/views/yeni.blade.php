@@ -101,7 +101,8 @@
                 <img src="adam.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">KATKI</h5>
-                  <p class="card-text">Siz de tüm kullanıcılar için soru ekleyebilir ve ücretsiz test ekosistemimize katkıda bulunabilirsiniz.</p>
+                  <p class="card-text">Siz de tüm kullanıcılar için soru ekleyebilir ve ücretsiz test ekosistemimize katkıda bulunabilirsiniz.Bize ulaşmak için<a href="mailto:cosmoem@gmail.com"> tıklayın.</a></p>
+
                 </div>
               </div>
             </div>
