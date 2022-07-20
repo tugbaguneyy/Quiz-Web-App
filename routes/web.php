@@ -5,8 +5,7 @@ use App\Http\Controllers\quizcontroller;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\MainController;
 
-Route::get('/', function () {return view('yeni');});
-
+Route::get('/', function () {return view('cosmeomMain');});
 
 Route::group(['middleware'=>'auth'],function(){
     Route::get('panel',[MainController::class,'dashboard'])->name('dashboard');

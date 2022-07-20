@@ -28,16 +28,43 @@
   <body>
     <!--Navbar-->
 
-    <div class="">
-                <a href="{{route('dashboard')}}" class="btn btn-link btn-block btn--slide-fx-from-bottom">Giriş</a>
-                @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="btn btn-link btn-block btn--slide-fx-from-right">Kayıt Ol</a>
-                        @endif
-            </div>
-          </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img src="{{URL::asset('projelogo.png')}}" width="70" height="60">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{route('dashboard')}}">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#hakkimizda">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sunduklarimiz">Size Sunduklarımız</a>
+            </li>
+
+          </ul>
+          @if (Route::has('login'))
+              <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                  @auth
+                      <a href="{{ route('dashboard') }}" class="btn btn-outline-primary">Dashboard</a>
+                  @else
+                      <a href="{{ route('login') }}" class="btn btn-outline-primary">Giriş</a>
+
+                      @if (Route::has('register'))
+                          <a href="{{ route('register') }}" class="btn btn-outline-primary">Kayıt Ol</a>
+                      @endif
+                  @endauth
+              </div>
+          @endif
+
         </div>
-      </nav>
-      <!--Navbarın Bitşi-->
+      </div>
+    </nav>
    <!--Slider-->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -140,7 +167,7 @@
       </div>
 
       <footer class="footer">
-        <p>© 2022 QUİZ UYGULAMASI</p>
+        <p>© 2022 COSMEOM</p>
       </footer>
       <!--Container Bitişi-->
     <!-- Option 1: Bootstrap Bundle with Popper -->
