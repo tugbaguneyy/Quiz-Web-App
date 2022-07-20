@@ -17,6 +17,7 @@
            <div class="mt-2">
              {{$quizzes->links()}}
            </div>
+        
          </div>
        </div>
        <div class="col-md-4">

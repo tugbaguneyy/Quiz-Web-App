@@ -5,7 +5,7 @@ use App\Http\Controllers\quizcontroller;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\MainController;
 
-Route::get('/', function () {return view('welcome');});
+Route::get('/', function () {return view('yeni');});
 
 
 Route::group(['middleware'=>'auth'],function(){

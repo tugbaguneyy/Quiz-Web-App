@@ -71,6 +71,8 @@
         <a href="{{route('quiz.join',$quiz->id)}}" class="btn btn-secondary">Sonucu Görüntüle</a>
       @elseif($quiz->finished_at>now())
         <a href="{{route('quiz.join',$quiz->id)}}" class="btn btn-primary">Başla</a>
+      @else
+        <a href="{{route('quiz.join',$quiz->id)}}" class="btn btn-primary">Başla</a>
         @endif
         </div>
       </div>

@@ -6,9 +6,12 @@
         <form method="POST" action="{{route('quiz.result',$quiz->id)}}">
           @csrf
         @foreach ($quiz->questions as $question)
+          <br>
           <strong>{{$loop->iteration}}. </strong>{{$question->question}}
+
           @if($question->image)
           <img src="{{asset($question->image)}}"  class="img-responsive">
+          <br>
         @endif
           <div class="form-check mt-2">
             <input class="form-check-input" type="radio" name="{{$question->id}}" id="quiz{{$question->id}}1" value="answer1" required>
@@ -34,6 +37,7 @@
               {{$question->answer4}}
            </label>
           </div>
+          <br>
           <hr>
         @endforeach
         <br>
