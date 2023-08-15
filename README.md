@@ -1,5 +1,5 @@
 # Quality Education Quiz Web Application
-
+<p>This project was prepared within the Argenova Technology 2022 Summer Internship Program.<p> 
 This project encompasses a quiz web application developed to promote quality education aligned with the Sustainable Development Goals. Users can test their knowledge on various subjects by answering questions. The project is built using Laravel, Bootstrap, and MySQL technologies.
 
 ## Features
@@ -43,6 +43,7 @@ This project encompasses a quiz web application developed to promote quality edu
 3. Commit your changes: `git commit -am 'Added new feature: DESCRIPTION'`
 4. Push to your branch: `git push origin new-feature`
 5. Create a Pull Request.
+
 
 ## License
 
