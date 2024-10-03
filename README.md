@@ -2,6 +2,28 @@
 <p>This project was prepared within the Argenova Technology 2022 Summer Internship Program.<p> 
 This project encompasses a quiz web application developed to promote quality education aligned with the Sustainable Development Goals. Users can test their knowledge on various subjects by answering questions. The project is built using Laravel, Bootstrap, and MySQL technologies.
 
+## Project Overview
+
+This project is designed to manage quizzes, providing functionalities for two types of users: administrators and regular users.
+
+### User Roles and Features
+
+#### Administrator Features:
+
+- Create Quizzes: Administrators can create new quizzes. Each quiz can be set to be active either indefinitely or until a specific end date.
+- Manage Questions: Administrators can add questions to existing quizzes or edit them as needed.
+- View Quiz Statistics: Administrators have access to comprehensive statistics for each quiz, including details such as:
+Who participated in the quiz.
+- Number of correct and incorrect answers given by users.
+- Date and time when each user completed the quiz.
+- A leaderboard showing top performers and user rankings.
+#### Regular User Features:
+
+- Take Quizzes: Regular users can participate in quizzes and answer questions.
+- Analyze Results: After completing a quiz, users can view detailed analytics of their performance, including correct and incorrect answers.
+- Review Completed Quizzes: Users have the ability to save and review quizzes they have completed, making it easier to revisit questions and improve.
+- View Quiz Statistics: Users can access the statistical overview of quizzes they’ve taken, allowing them to track their progress and see where improvements can be made.
+
 ## Features
 
 - Users can answer questions on different topics.
