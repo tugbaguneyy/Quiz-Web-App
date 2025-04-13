@@ -45,7 +45,7 @@ Who participated in the quiz.
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/YOUR_USERNAME/PROJECT_REPO.git`
+1. Clone this repository: `git clone https://github.com/tugbaguneyy/Quiz-Web-App.git`
 2. Navigate to the project folder: `cd PROJECT_REPO`
 3. Install the required dependencies: `composer install`
 4. Copy the `.env.example` file as `.env` and configure your database settings.
